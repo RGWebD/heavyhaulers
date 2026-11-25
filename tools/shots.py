@@ -1,6 +1,6 @@
 import asyncio, sys
 from playwright.async_api import async_playwright
-BASE='http://localhost:47213/'
+BASE='https://rgwebd.github.io/heavyhaulers/'
 OUT='/workspace/heavyhaulers/qa/shots/'
 # spec: name page width selector(or 'top')
 SPECS=[l.split() for l in sys.argv[1:]]
