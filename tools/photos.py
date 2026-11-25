@@ -21,6 +21,8 @@ PLAN = [
     # (source, out-name, crop or None, blur boxes, maxw)
     ('gbp/g18.jpg', 'crew', None, [], 2000),
     ('gbp/g14.jpg', 'crew-four', None, [], 1400),
+    ('gbp/g18.jpg', 'crew-wide', (0, 330, 2000, 1333), [], 2000),
+    ('gbp/g30.jpg', 'dumpster-downtown-crop', (0, 230, 1350, 1010), [], 1350),
     ('gbp/g11.jpg', 'demo-sledgehammers', None, [], 1600),
     ('gbp/g29.jpg', 'demo-cutting-sparks', None, [], 1080),
     ('gbp/g13.jpg', 'dumpster-loaded', None, [], 1200),
