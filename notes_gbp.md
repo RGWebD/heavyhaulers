@@ -1,7 +1,7 @@
 # GBP notes - INCOMPLETE
 Share link https://share.google/FzeOBQOG7yCig0FKf resolved (Nov 25 2026) to a DIFFERENT business: "JACKSONVILLE MOBILE MECHANICS LC" (Mechanic, 4.6 stars, 315 reviews, phone (904) 800-8923, open 24 hours), kgmid /g/11stvmwspf.
 Not Heavy Haulers. No data collected from it.
-Web search for Heavy Haulers (904-576-1110) shows: Yelp "HEAVY HAULERS" Orange Park 4.6 (7); Blue Book address 1120 Park Ave, Orange Park FL 32073; Facebook "Heavy Haulers & Junk Removal"; Instagram heavyhaulersandjunkremoval.
+Web search for Heavy Haulers (904-576-8383) shows: Yelp "HEAVY HAULERS" Orange Park 4.6 (7); Blue Book address 1120 Park Ave, Orange Park FL 32073; Facebook "Heavy Haulers & Junk Removal"; Instagram heavyhaulersandjunkremoval.
 
 # Google Business Profile research (collected 2026-11-25, read-only)
 
@@ -11,7 +11,7 @@ Share link https://share.google/qciXKhqHS1KsYP81U resolves to Google Search know
 - Name: Heavy Haulers & Junk Removal
 - Category: Debris removal service
 - Address (Maps): 1120 Park Ave # D, Orange Park, FL 32073 (plus code 57GX+F6 Orange Park, Florida). Yelp/BlueBook list 1120 Park Ave, Orange Park FL 32073. (Lat/long 30.1761335, -81.7018916)
-- Phone shown on Google Maps: (904) 576-8383  <-- NOTE: differs from 904-576-1110, which appears on Yelp/Facebook/BlueBook/Buzzfile. Other directories also show (904) 710-2564 / (904) 607-5777 (CityOf.com).
+- Phone shown on Google Maps: (904) 576-8383. Other directories also show (904) 710-2564 / (904) 607-5777 (CityOf.com).
 - Website on GBP: NONE listed ("Add website" prompt). Third-party sources list www.heavyhaulersandjunkremoval.com (Buzzfile).
 - Booking link: none shown.
 - Resolved Maps URL: https://www.google.com/maps/place/Heavy+Haulers+%26+Junk+Removal/@30.1761335,-81.7018916,17z/data=!3m1!4b1!4m6!3m5!1s0x2c8f717f820eb6c5:0x71e0117d2bfaf920!8m2!3d30.1761335!4d-81.7018916!16s%2Fg%2F11r_xhfyv7
@@ -21,7 +21,7 @@ Share link https://share.google/qciXKhqHS1KsYP81U resolves to Google Search know
 - "From the business" description: none beyond the Black-owned attribute (no description text on GBP).
 - Services (from review service tags): House & garage cleanouts, Yard debris removal, Appliance removal & disposal, Junk removal, Construction debris removal, Furniture removal. Review topic chips: friendly crew, hot tub removal, friendly staff(55), house clearing, online quote, easy scheduling, no hidden fees, cleanliness, upfront pricing, careful handling.
 - Service area list: none shown on GBP.
-- Social links: none shown on GBP. Search results show Facebook page "HeavyHaulers JunkRemoval" (840+ followers) - "full home, mobile home, interior, backyard demos... Call (904) 576-1110". Also Yelp (4.6, 7 reviews), Nextdoor, wheree.com listings.
+- Social links: none shown on GBP. Search results show Facebook page "HeavyHaulers JunkRemoval" (840+ followers) - "full home, mobile home, interior, backyard demos... Call (904) 576-8383". Also Yelp (4.6, 7 reviews), Nextdoor, wheree.com listings.
 - Owner reply style: signs off with muscle emojis; owner named Juan (also "Matt", "Warren", "Ron" appear in reviews).
 
 ## Reviews (verbatim; all 5 stars unless noted - overall 5.0; stars explicitly verified for first five, others assumed 5 from the 5.0 average)
