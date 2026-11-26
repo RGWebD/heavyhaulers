@@ -43,7 +43,7 @@ def business_ld(full=True):
     ld = {
         "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", "@id": BASE + "#business",
         "name": D['name'], "url": BASE, "telephone": D['phone'], "image": BASE + "img/crew.webp",
-        "logo": BASE + "brand/logo-stacked.png",
+        "logo": BASE + "brand/logo-512.png",
         "description": "Junk removal, demolition, house and garage cleanouts, construction and yard debris removal, appliance, furniture and hot tub removal in Orange Park and the Jacksonville area. Black-owned. Call or text (904) 576-1110 for a free quote.",
         "address": {"@type": "PostalAddress", "streetAddress": D['street'], "addressLocality": D['city'], "addressRegion": D['region'], "postalCode": D['zip'], "addressCountry": "US"},
         "geo": {"@type": "GeoCoordinates", "latitude": D['lat'], "longitude": D['lng']},
@@ -65,7 +65,7 @@ def crumbs_ld(title, href):
         {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE},
         {"@type": "ListItem", "position": 2, "name": title, "item": BASE + href}]}
 
-def head(href, title, desc, ld, og='og.jpg'):
+def head(href, title, desc, ld, og='og.jpg?v=4'):
     can = BASE + ('' if href == 'index.html' else href)
     lds = '\n'.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
     return f'''<!doctype html>
@@ -83,15 +83,16 @@ def head(href, title, desc, ld, og='og.jpg'):
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{E(title)}">
 <meta name="twitter:description" content="{E(desc)}"><meta name="twitter:image" content="{BASE}{og}">
-<link rel="icon" href="brand/favicon.ico" sizes="any">
-<link rel="icon" type="image/svg+xml" href="brand/emblem.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png">
-<link rel="apple-touch-icon" href="brand/favicon-180.png">
+<link rel="icon" href="brand/favicon.ico?v=4" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="brand/favicon-32.png?v=4">
+<link rel="icon" type="image/png" sizes="16x16" href="brand/favicon-16.png?v=4">
+<link rel="apple-touch-icon" href="brand/icon-180.png?v=4">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Smokum&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=3">
+<link rel="stylesheet" href="assets/site.css?v=4">
 {lds}
+<script src="https://cosmiccallers.lovable.app/demo-track.js" data-demo="heavyhaulers" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -102,7 +103,7 @@ def nav(href):
     items = ''.join(f'<li><a href="{h}"{" aria-current=\"page\"" if h == href else ""}>{t}</a></li>' for h, t in PAGES[1:])
     mitems = ''.join(f'<a href="{h}"{" aria-current=\"page\"" if h == href else ""}>{t}</a>' for h, t in PAGES)
     return f'''<header class="nav" role="banner">
-  <a class="brand" href="index.html" aria-label="{E(D['name'])} home"><img src="brand/logo-horizontal-dark.svg" width="200" height="48" alt="{E(D['name'])}"></a>
+  <a class="brand" href="index.html" aria-label="{E(D['name'])} home"><img src="brand/logo-plate-480.webp?v=4" width="514" height="421" alt="{E(D['name'])} logo — cowboy pulling a pickup by a chain"></a>
   <nav aria-label="Main"><ul>{items}</ul></nav>
   <div class="ctas"><a class="btn sm ghost" href="{SMS}">{I_SMS}Text</a><a class="btn sm" href="{TEL}" data-magnet>{I_PHONE}{D['phone']}</a></div>
   <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="mmenu"><span></span><span></span><span></span></button>
@@ -118,7 +119,7 @@ def footer():
     return f'''<footer>
   <div class="wrap">
     <div class="fgrid">
-      <div><img class="flogo" src="brand/logo-stacked-dark.svg" width="230" height="191" alt="{E(D['name'])} logo" loading="lazy">
+      <div><img class="flogo" src="brand/logo-plate-480.webp?v=4" width="514" height="421" alt="{E(D['name'])} logo" loading="lazy">
         <p>Junk removal, demolition and cleanouts for Orange Park, Jacksonville and the surrounding area. Black-owned. 5.0 stars from {D['review_count']} Google reviews.</p></div>
       <div><h4>Pages</h4><ul>{links}</ul></div>
       <div><h4>Find us</h4><ul><li>{E(D['street'])}<br>{D['city']}, {D['region']} {D['zip']}</li>
@@ -133,7 +134,7 @@ def footer():
 <div class="mbar" role="region" aria-label="Quick contact"><a class="btn" href="{TEL}">{I_PHONE}Call</a><a class="btn ghost" href="{SMS}">{I_SMS}Text a photo</a></div>
 <div class="pill" role="note">Design preview by <a href="https://rgwebd.github.io/rgwebd/" target="_blank" rel="noopener">RGWebD</a><button type="button" aria-label="Dismiss preview note">×</button></div>
 <script>window.HH_HOURS={json.dumps({k: v for k, v in D['hours'].items() if v})};</script>
-<script src="assets/site.js?v=3" defer></script>
+<script src="assets/site.js?v=4" defer></script>
 </body></html>
 '''
 
@@ -243,7 +244,7 @@ def page_home():
     mq = ''.join(f'<span class="{"o" if i % 2 else ""}">{E(t)}</span><b aria-hidden="true">★</b>' for i, t in enumerate(marquee_items))
     body = f'''
 <div class="loader" aria-hidden="true"><div class="door l"></div><div class="door r"></div>
-  <div class="core"><img src="brand/logo-stacked-dark.svg" width="340" height="282" alt=""><div class="bar"><i></i></div></div></div>
+  <div class="core"><img src="brand/logo-plate-480.webp?v=4" width="514" height="421" alt=""><div class="bar"><i></i></div></div></div>
 {nav(href)}
 <main id="main">
 <section class="hero" aria-label="Intro">
@@ -631,8 +632,8 @@ def og_image():
     for i in range(W):
         dr.line([(i, 0), (i, H)], fill=int(max(0, 215 - i * 0.42)))
     im.paste(Image.new('RGB', (W, H), (11, 11, 13)), (0, 0), grad)
-    logo = Image.open(os.path.join(ROOT, 'brand', 'logo-stacked-dark.png')).convert('RGBA')
-    logo.thumbnail((440, 440)); im.paste(logo, (40, (H - logo.height) // 2), logo)
+    logo = Image.open(os.path.join(ROOT, 'brand', 'official', 'logo-plate.png')).convert('RGBA')
+    logo.thumbnail((470, 470)); im.paste(logo, (40, (H - logo.height) // 2), logo)
     tape = Image.new('RGB', (W, 12)); td = ImageDraw.Draw(tape)
     for k in range(0, W, 108):
         td.rectangle([k, 0, k + 53, 12], fill=(215, 38, 30)); td.rectangle([k + 54, 0, k + 107, 12], fill=(242, 242, 242))
@@ -644,9 +645,9 @@ def main():
     os.makedirs(os.path.join(OUT, 'assets'))
     shutil.copytree(os.path.join(ROOT, 'img'), os.path.join(OUT, 'img'))
     os.makedirs(os.path.join(OUT, 'brand'))
-    for f in os.listdir(os.path.join(ROOT, 'brand')):
-        if f.endswith(('.svg', '.png', '.ico')):
-            shutil.copy(os.path.join(ROOT, 'brand', f), os.path.join(OUT, 'brand', f))
+    for f in os.listdir(os.path.join(ROOT, 'brand', 'official')):
+        if f.endswith(('.webp', '.png', '.ico')) and not f.startswith('mark-'):
+            shutil.copy(os.path.join(ROOT, 'brand', 'official', f), os.path.join(OUT, 'brand', f))
     shutil.copy(os.path.join(ROOT, 'src', 'site.css'), os.path.join(OUT, 'assets', 'site.css'))
     shutil.copy(os.path.join(ROOT, 'src', 'site.js'), os.path.join(OUT, 'assets', 'site.js'))
     pages = {'index.html': page_home(), 'services.html': page_services(), 'fleet.html': page_fleet(), 'crew.html': page_crew(),
@@ -658,7 +659,7 @@ def main():
     urls = ''.join(f'<url><loc>{BASE}{"" if h == "index.html" else h}</loc><lastmod>2026-11-25</lastmod></url>' for h, _ in PAGES)
     open(os.path.join(OUT, 'sitemap.xml'), 'w').write(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>')
     open(os.path.join(OUT, 'site.webmanifest'), 'w').write(json.dumps({"name": D['name'], "short_name": "Heavy Haulers", "icons": [
-        {"src": "brand/favicon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "brand/favicon-512.png", "sizes": "512x512", "type": "image/png"}],
+        {"src": "brand/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "brand/icon-512.png", "sizes": "512x512", "type": "image/png"}],
         "theme_color": "#0b0b0d", "background_color": "#0b0b0d", "display": "standalone"}))
     open(os.path.join(OUT, '.nojekyll'), 'w').write('')
     og_image()

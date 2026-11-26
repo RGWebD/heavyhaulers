@@ -1,6 +1,6 @@
 import asyncio, json, sys, os
 from playwright.async_api import async_playwright
-BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:47213/'
+BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:47219/'
 TAG = sys.argv[2] if len(sys.argv) > 2 else 'r1'
 OUT = '/workspace/heavyhaulers/qa/shots'
 PAGES = ['index.html', 'services.html', 'fleet.html', 'crew.html', 'reviews.html', 'contact.html', '404.html']
