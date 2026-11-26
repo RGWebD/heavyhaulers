@@ -2,7 +2,7 @@
 Facts + sources: notes_gbp.md (GBP via https://share.google/qciXKhqHS1KsYP81U, kgmid /g/11r_xhfyv7) and site.json.
 
 ## Needs confirm
-- Phone: site uses (904) 576-1110 (on their dumpster, Yelp/FB/BlueBook/Buzzfile). Google Maps shows (904) 576-8383 — not shown.
+- Phone: (904) 576-8383, matching the Google Maps listing.
 - Hours: GBP confirms Sun closed, Mon/Tue 8–5. Wed–Sat unverified; shown as Mon–Sat 8–5.
 - heavyhaulersandjunkremoval.com (Buzzfile): Verisign RDAP returns 404 (not registered); HTTPS fails. GBP has no website.
 - Instagram URL built from the handle heavyhaulersandjunkremoval (used in footer + sameAs). Facebook URL not captured, so not linked.

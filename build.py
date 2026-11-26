@@ -44,7 +44,7 @@ def business_ld(full=True):
         "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", "@id": BASE + "#business",
         "name": D['name'], "url": BASE, "telephone": D['phone'], "image": BASE + "img/crew.webp",
         "logo": BASE + "brand/logo-512.png",
-        "description": "Junk removal, demolition, house and garage cleanouts, construction and yard debris removal, appliance, furniture and hot tub removal in Orange Park and the Jacksonville area. Black-owned. Call or text (904) 576-1110 for a free quote.",
+        "description": "Junk removal, demolition, house and garage cleanouts, construction and yard debris removal, appliance, furniture and hot tub removal in Orange Park and the Jacksonville area. Black-owned. Call or text (904) 576-8383 for a free quote.",
         "address": {"@type": "PostalAddress", "streetAddress": D['street'], "addressLocality": D['city'], "addressRegion": D['region'], "postalCode": D['zip'], "addressCountry": "US"},
         "geo": {"@type": "GeoCoordinates", "latitude": D['lat'], "longitude": D['lng']},
         "hasMap": D['maps_url'],
@@ -145,7 +145,7 @@ def chip_row():
       <span class="chip open-badge"><span class="dot" aria-hidden="true"></span><span class="t">{HOURS_LINE}</span></span>'''
 
 def cta_band(title='Got junk?<br>Call the crew.', sub=None):
-    sub = sub or 'Call or text (904) 576-1110 — snap a photo of the pile and get a free quote.'
+    sub = sub or 'Call or text (904) 576-8383 — snap a photo of the pile and get a free quote.'
     return f'''<section class="cta-band pad" aria-label="Get a free quote">
   <div class="bigtype" aria-hidden="true">HAUL IT</div>
   <div class="wrap"><h2 class="rv-up">{title}</h2><p class="rv-up">{sub}</p>
@@ -204,10 +204,10 @@ def gauge(frac, val, dec, label, suffix=''):
 
 FLEET = [
     dict(id='dumpster', no='01', name='Dumpster Trailer', tag='Heavy Haulers branded',
-         img='dumpster-trailer', alt='Heavy Haulers black dumpster trailer loaded with old lumber, lettered 904.576.1110',
+         img='dumpster-trailer', alt='Heavy Haulers black dumpster trailer loaded with old lumber, lettered 904.576.8383',
          inset='dumpster-decal', inset_alt='Heavy Haulers & Junk Removal logo decal on the dumpster door',
          blurb='The big black box with the red lettering. It rolls up to the curb, swallows a whole house worth of junk, and leaves with it.',
-         role='Hauling loads off site: cleanouts, construction debris, yard debris', look='Black roll-off box, red & white reflective tape, "904.576.1110" on the side',
+         role='Hauling loads off site: cleanouts, construction debris, yard debris', look='Black roll-off box, red & white reflective tape, "904.576.8383" on the side',
          lettered='Junk Removal · Demolition · House Clean Outs · Construction · Yard Debris Removal'),
     dict(id='bobcat', no='02', name='Bobcat Track Loader', tag='Grapple bucket',
          img='bobcat-grapple', alt='White Bobcat compact track loader with a grapple bucket loading debris into a black dump trailer',
@@ -234,7 +234,7 @@ FLEET = [
 def page_home():
     href = 'index.html'
     title = 'Heavy Haulers & Junk Removal | Junk Removal & Demolition, Orange Park FL'
-    desc = 'Orange Park junk removal, demolition and cleanouts. 5.0 stars from 216 Google reviews. Call or text (904) 576-1110 for a free quote — Mon–Sat 8–5.'
+    desc = 'Orange Park junk removal, demolition and cleanouts. 5.0 stars from 216 Google reviews. Call or text (904) 576-8383 for a free quote — Mon–Sat 8–5.'
     h = head(href, title, desc, [business_ld(True)])
     units = ''.join(f'''<a class="unit" href="fleet.html#{u['id']}" data-tilt>
   <span class="tag">{u['tag']}</span>
@@ -351,7 +351,7 @@ def page_home():
 
 SERVICES = [
     dict(id='junk', n='01', t='Junk removal', img='dumpster-loaded', tall=True,
-         alt='Heavy Haulers dumpster trailer piled high with bags and boxes of junk, lettered 904.576.1110',
+         alt='Heavy Haulers dumpster trailer piled high with bags and boxes of junk, lettered 904.576.8383',
          p='Old furniture, boxes, bagged trash, moving leftovers, rental turnovers — if you want it gone, the crew loads it and hauls it away. You point, they lift.',
          ex=['A pile of cardboard after a move — broken down and gone within an hour (Jordan S.)', 'A rental property cleared out the same day, in about an hour (Samuel S.)', '“A fast pickup of a ton of junk” — same day (Carrie F.)']),
     dict(id='demolition', n='02', t='Demolition', img='demo-sledgehammers', img2='demo-cutting-sparks',
@@ -379,7 +379,7 @@ SERVICES = [
 def page_services():
     href = 'services.html'
     title = 'Services | Junk Removal, Demolition & Cleanouts — Heavy Haulers, Orange Park FL'
-    desc = 'Junk removal, demolition, house & garage cleanouts, construction and yard debris, hot tubs, appliances and furniture. Orange Park & Jacksonville. Call (904) 576-1110.'
+    desc = 'Junk removal, demolition, house & garage cleanouts, construction and yard debris, hot tubs, appliances and furniture. Orange Park & Jacksonville. Call (904) 576-8383.'
     svc_ld = {"@context": "https://schema.org", "@type": "ItemList", "name": "Heavy Haulers services", "itemListElement": [
         {"@type": "ListItem", "position": i + 1, "item": {"@type": "Service", "name": s['t'], "description": s['p'], "provider": {"@id": BASE + "#business"}, "areaServed": "Orange Park & Jacksonville, FL"}} for i, s in enumerate(SERVICES)]}
     h = head(href, title, desc, [business_ld(False), crumbs_ld('Services', href), svc_ld])
@@ -442,14 +442,14 @@ def page_fleet():
 {phero(href, 'The Fleet', 'Equipment that means business', 'The <span class="red">fleet.</span>', 'A crew is only as good as what it brings. Here is the iron that shows up on Heavy Haulers jobs — from the branded dumpster trailer to track loaders, a telehandler and an excavator.', img('dumpster-downtown-crop', 'Heavy Haulers dumpster trailer and hauling truck at a downtown Jacksonville job', lazy=False), 'IRON')}
 <section class="pad-s"><div class="wrap">{units}</div></section>
 <section class="pad-s"><div class="wrap" style="text-align:center"><p class="lead" style="margin:0 auto">Photos are from real Heavy Haulers jobs posted on their Google profile. Ask about the right machine for your job when you call.</p></div></section>
-{cta_band('Need the<br>big iron?', 'Call or text (904) 576-1110 and tell us what you are moving.')}
+{cta_band('Need the<br>big iron?', 'Call or text (904) 576-8383 and tell us what you are moving.')}
 </main>'''
     return h + body + footer()
 
 def page_crew():
     href = 'crew.html'
     title = 'The Crew | Black-Owned Junk Removal & Demolition Team — Heavy Haulers, Orange Park'
-    desc = 'Meet the Heavy Haulers crew: a Black-owned Orange Park junk removal and demolition team with 5.0 stars from 216 Google reviews. Call (904) 576-1110.'
+    desc = 'Meet the Heavy Haulers crew: a Black-owned Orange Park junk removal and demolition team with 5.0 stars from 216 Google reviews. Call (904) 576-8383.'
     h = head(href, title, desc, [business_ld(False), crumbs_ld('The Crew', href)])
     gal = [('demo-cutting-sparks', 'Cutting steel bollards, sparks flying'), ('hot-tub-trailer', 'Loading an old hot tub onto the trailer in a driveway'),
            ('decking-debris', 'Old decking stacked for haul-off'), ('yard-cleared', 'Backyard cleared down to bare ground'),
@@ -534,8 +534,8 @@ FAQ = [
 
 def page_contact():
     href = 'contact.html'
-    title = 'Contact | Call or Text (904) 576-1110 — Heavy Haulers & Junk Removal, Orange Park'
-    desc = 'Call or text Heavy Haulers at (904) 576-1110 for a free junk removal or demolition quote. 1120 Park Ave #D, Orange Park FL. Mon–Sat 8 AM–5 PM.'
+    title = 'Contact | Call or Text (904) 576-8383 — Heavy Haulers & Junk Removal, Orange Park'
+    desc = 'Call or text Heavy Haulers at (904) 576-8383 for a free junk removal or demolition quote. 1120 Park Ave #D, Orange Park FL. Mon–Sat 8 AM–5 PM.'
     faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
     h = head(href, title, desc, [business_ld(False), crumbs_ld('Contact', href), faq_ld])
     rows = ''.join(f'<tr data-d="{k}"><td>{full}</td><td>{(fmt_t(D["hours"][k][0]) + " – " + fmt_t(D["hours"][k][1])) if D["hours"][k] else "Closed"}</td></tr>' for k, full in DAYS)
